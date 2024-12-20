@@ -8,13 +8,10 @@ from bfcl.model_handler.oss_model.hammer import HammerHandler
 from bfcl.model_handler.oss_model.hermes import HermesHandler
 from bfcl.model_handler.oss_model.llama import LlamaHandler
 from bfcl.model_handler.oss_model.llama_fc import LlamaFCHandler
-<<<<<<< HEAD
-=======
 from bfcl.model_handler.oss_model.phi import PhiHandler
 from bfcl.model_handler.oss_model.salesforce import SalesforceHandler
 from bfcl.model_handler.oss_model.funcgen import FuncGenHandler
 from bfcl.model_handler.oss_model.qwen import QwenHandler
->>>>>>> 5cbf37e (update with gorilla official)
 from bfcl.model_handler.oss_model.minicpm import MiniCPMHandler
 from bfcl.model_handler.oss_model.minicpm_fc import MiniCPMFCHandler
 from bfcl.model_handler.oss_model.phi import PhiHandler
@@ -144,7 +141,6 @@ local_inference_handler_map = {
     "Qwen/Qwen2.5-1.5B-Instruct": QwenHandler,
     "Qwen/Qwen2.5-3B-Instruct": QwenHandler,
     "Qwen/Qwen2.5-7B-Instruct": QwenHandler,
-<<<<<<< HEAD
     "Qwen/Qwen2.5-72B-Instruct": QwenHandler,
     "Team-ACE/ToolACE-8B": LlamaHandler,
     "openbmb/MiniCPM3-4B": MiniCPMHandler,
@@ -154,7 +150,6 @@ local_inference_handler_map = {
     "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct": DeepseekCoderHandler,
     "deepseek-ai/DeepSeek-V2-Chat-0628": DeepseekHandler,
     "deepseek-ai/DeepSeek-V2-Lite-Chat": DeepseekHandler,
-=======
     "Qwen2.5-Instruct-7B-xlam-default": QwenHandler,
     "Qwen2.5-Instruct-7B-xlam": SalesforceHandler,
     "Qwen2.5-7B-Instruct-CODEPLAN": FuncGenHandler,
@@ -180,7 +175,6 @@ local_inference_handler_map = {
     "Team-ACE/ToolACE-8B": LlamaHandler,
     "openbmb/MiniCPM3-4B": MiniCPMHandler,
     "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct": DeepseekHandler
->>>>>>> 5cbf37e (update with gorilla official)
 }
 
 # Deprecated/outdated models, no longer on the leaderboard

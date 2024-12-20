@@ -17,12 +17,7 @@ from bfcl.model_handler.utils import (
     retry_with_backoff,
     system_prompt_pre_processing_chat_model,
 )
-<<<<<<< HEAD
-from openai import OpenAI, RateLimitError
-
-=======
-from openai import OpenAI, AzureOpenAI
->>>>>>> 5cbf37e (update with gorilla official)
+from openai import OpenAI, AzureOpenAI, RateLimitError
 
 class OpenAIHandler(BaseHandler):
     def __init__(self, model_name, temperature) -> None:

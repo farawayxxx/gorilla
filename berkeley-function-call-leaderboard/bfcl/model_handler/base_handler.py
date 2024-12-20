@@ -575,14 +575,9 @@ class BaseHandler:
         inference_data = self.add_first_turn_message_prompting(
             inference_data, test_entry["question"][0]
         )
-<<<<<<< HEAD
-
-        api_response, query_latency = self._query_prompting(inference_data)
-=======
         start_time = time.time()
         api_response = self._query_prompting(inference_data)
         query_latency = time.time() - start_time
->>>>>>> 5cbf37e (update with gorilla official)
 
         # Try parsing the model response
         model_response_data = self._parse_query_response_prompting(api_response)
