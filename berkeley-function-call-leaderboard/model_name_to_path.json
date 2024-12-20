@@ -1,0 +1,5 @@
+{
+    "Team-ACE/ToolACE-8B": "/mnt/raid/guozikang/plm/ToolACE-8B",
+    "Qwen/Qwen2.5-7B-Instruct": "/mnt/raid/chenyihan/models/Qwen/Qwen2.5-7B-Instruct",
+    "FuncGen": "/mnt/raid/guozikang/llm/BFCL/models/qwen25-7b.multiwoz2.qwen25.1219"
+}

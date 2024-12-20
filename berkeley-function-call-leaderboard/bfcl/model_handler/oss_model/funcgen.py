@@ -5,7 +5,7 @@ from bfcl.model_handler.oss_model.constant import VLLM_PORT
 from bfcl.model_handler.oss_model.base_oss_handler import OSSHandler
 from openai import OpenAI
 from termcolor import colored
-
+from overrides import override
 
 class FuncGenHandler(OSSHandler):
     def __init__(self, model_name, temperature) -> None:
@@ -14,7 +14,8 @@ class FuncGenHandler(OSSHandler):
 
         config = xLAMConfig(base_url=f"http://localhost:{VLLM_PORT}/v1/", model=self.model_name)
         self.client = xLAMChatCompletion.from_config(config)
-
+    
+    @override
     def decode_ast(self, result, language="Python"):
         decoded_output = []
         for invoked_function in result:
@@ -22,7 +23,8 @@ class FuncGenHandler(OSSHandler):
             params = invoked_function["arguments"]
             decoded_output.append({name: params})
         return decoded_output
-
+    
+    @override
     def decode_execute(self, result):
         if isinstance(result, list):
             tool_calls = result
@@ -32,7 +34,8 @@ class FuncGenHandler(OSSHandler):
             tool_calls = []
         function_call = self.xlam_json_to_python_tool_calls(tool_calls)
         return function_call
-
+    
+    @override
     def _parse_query_response_prompting(self, api_response: any) -> dict:
         return {
                 "model_responses": api_response["choices"][0]["message"]["tool_calls"],
@@ -93,6 +96,7 @@ class FuncGenHandler(OSSHandler):
 
         return python_format
 
+    @staticmethod
     def convert_to_dict(self, input_str):
         """
         Convert a JSON-formatted string into a dictionary of tool calls and their arguments.
@@ -117,7 +121,8 @@ class FuncGenHandler(OSSHandler):
         ]
 
         return result_list
-
+    
+    @override
     def _query_prompting(self, inference_data: dict):
         function: list[dict] = inference_data["function"]
         message: list[dict] = inference_data["message"]
