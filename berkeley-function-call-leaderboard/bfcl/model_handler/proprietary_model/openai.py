@@ -17,14 +17,22 @@ from bfcl.model_handler.utils import (
     retry_with_backoff,
     system_prompt_pre_processing_chat_model,
 )
+<<<<<<< HEAD
 from openai import OpenAI, RateLimitError
 
+=======
+from openai import OpenAI, AzureOpenAI
+>>>>>>> 5cbf37e (update with gorilla official)
 
 class OpenAIHandler(BaseHandler):
     def __init__(self, model_name, temperature) -> None:
         super().__init__(model_name, temperature)
         self.model_style = ModelStyle.OpenAI
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        # self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.client = AzureOpenAI(azure_endpoint=os.getenv("OPENAI_ENDPOINT"),
+                                api_key=os.getenv("OPENAI_API_KEY"),
+                                api_version="2024-02-15-preview"
+                                )
 
     def decode_ast(self, result, language="Python"):
         if "FC" in self.model_name or self.is_fc_model:

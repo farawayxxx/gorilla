@@ -409,6 +409,12 @@ MODEL_METADATA_MAPPING = {
         "DeepSeek",
         "DeepSeek License",
     ],
+    "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct": [
+        "Deepseek-v1.5 (Prompt)",
+        "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+        "Deepseek",
+        "Deepseek License",
+    ],
     "google/gemma-7b-it": [
         "Gemma-7b-it (Prompt)",
         "https://blog.google/technology/developers/gemma-open-models/",
@@ -481,6 +487,12 @@ MODEL_METADATA_MAPPING = {
         "Meta",
         "Meta Llama 3 Community",
     ],
+    "MAmmoTH2-8B-Plus": [
+        "MAmmoTH2-8B-Plus (Prompt)",
+        "https://huggingface.co/TIGER-Lab/MAmmoTH2-8B-Plus",
+        "Meta",
+        "Meta Llama 3 Community",
+    ],
     "meta-llama/Meta-Llama-3-70B-Instruct": [
         "Meta-Llama-3-70B-Instruct (Prompt)",
         "https://llama.meta.com/llama3",
@@ -532,6 +544,12 @@ MODEL_METADATA_MAPPING = {
     "meta-llama/Llama-3.3-70B-Instruct-FC": [
         "Llama-3.3-70B-Instruct (FC)",
         "https://llama.meta.com/llama3",
+        "Meta",
+        "Meta Llama 3 Community",
+    ],
+    "Infinity-Instruct-7M-Gen-Llama3.1-8B":[
+        "Infinity-Instruct-7M-Gen-Llama3.1-8B",
+        "https://huggingface.co/BAAI/Infinity-Instruct-7M-Gen-Llama3_1-8B",
         "Meta",
         "Meta Llama 3 Community",
     ],
@@ -691,18 +709,151 @@ MODEL_METADATA_MAPPING = {
         "Qwen",
         "apache-2.0",
     ],
+    "Qwen/Qwen2.5-3B-Instruct": [
+        "Qwen2.5-3B-Instruct (Prompt)",
+        "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
     "Qwen/Qwen2.5-7B-Instruct": [
         "Qwen2.5-7B-Instruct (Prompt)",
         "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
         "Qwen",
         "apache-2.0",
     ],
+<<<<<<< HEAD
     "Qwen/Qwen2.5-72B-Instruct": [
+=======
+    "Qwen/Qwen2.5-Coder-7B-Instruct": [
+        "Qwen2.5-Coder-7B-Instruct (Prompt)",
+        "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "Qwen/Qwen2.5-Coder-1.5B-Instruct": [
+        "Qwen2.5-Coder-1.5B-Instruct (Prompt)",
+        "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "qwen25": [
+>>>>>>> 5cbf37e (update with gorilla official)
         "Qwen2.5-72B-Instruct (Prompt)",
         "https://huggingface.co/Qwen/Qwen2.5-72B-Instruct",
         "Qwen",
         "apache-2.0",
     ],
+<<<<<<< HEAD
+=======
+    "Qwen2.5-7B-Instruct-CODEPLAN":[
+        "Qwen2.5-7B-Instruct-CODEPLAN",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "Qwen2.5-Instruct-7B-xlam-default":[
+        "Qwen2.5-Instruct-7B-xlam-default",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "Qwen2.5-Instruct-7B-xlam":[
+        "Qwen2.5-Instruct-7B-xlam",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1122": [
+        "FuncGen-1122",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1203": [
+        "FuncGen-1203",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1204": [
+        "FuncGen-1204",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1207": [
+        "FuncGen-1207",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1209": [
+        "FuncGen-1209",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1211": [
+        "FuncGen-1211",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+        "FuncGen-1213": [
+        "FuncGen-1213",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1217": [
+        "FuncGen-1217",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1217-onlyfc":[
+        "FuncGen-1217-onlyfc",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1219":[
+        "FuncGen-1219",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1209-2": [
+        "FuncGen-1209-2",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1211-2": [
+        "FuncGen-1211-2",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1122-template-revised": [
+        "FuncGen-1122-template-revised",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1122-template-revised-Qwen": [
+        "FuncGen-1122-template-revised-Qwen",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+    "FuncGen-1122-template-revised-Qwen-Assistant": [
+        "FuncGen-1122-template-revised-Qwen",
+        "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
+        "Qwen",
+        "apache-2.0",
+    ],
+>>>>>>> 5cbf37e (update with gorilla official)
     "Team-ACE/ToolACE-8B": [
         "ToolACE-8B (FC)",
         "https://huggingface.co/Team-ACE/ToolACE-8B",

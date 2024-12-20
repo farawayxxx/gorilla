@@ -8,6 +8,13 @@ from bfcl.model_handler.oss_model.hammer import HammerHandler
 from bfcl.model_handler.oss_model.hermes import HermesHandler
 from bfcl.model_handler.oss_model.llama import LlamaHandler
 from bfcl.model_handler.oss_model.llama_fc import LlamaFCHandler
+<<<<<<< HEAD
+=======
+from bfcl.model_handler.oss_model.phi import PhiHandler
+from bfcl.model_handler.oss_model.salesforce import SalesforceHandler
+from bfcl.model_handler.oss_model.funcgen import FuncGenHandler
+from bfcl.model_handler.oss_model.qwen import QwenHandler
+>>>>>>> 5cbf37e (update with gorilla official)
 from bfcl.model_handler.oss_model.minicpm import MiniCPMHandler
 from bfcl.model_handler.oss_model.minicpm_fc import MiniCPMFCHandler
 from bfcl.model_handler.oss_model.phi import PhiHandler
@@ -97,6 +104,8 @@ local_inference_handler_map = {
     "google/gemma-2-2b-it": GemmaHandler,
     "google/gemma-2-9b-it": GemmaHandler,
     "google/gemma-2-27b-it": GemmaHandler,
+    "Infinity-Instruct-7M-Gen-Llama3.1-8B": LlamaHandler,
+    "MAmmoTH2-8B-Plus": LlamaHandler,
     "meta-llama/Meta-Llama-3-8B-Instruct": LlamaHandler,
     "meta-llama/Meta-Llama-3-70B-Instruct": LlamaHandler,
     "meta-llama/Llama-3.1-8B-Instruct-FC": LlamaFCHandler,
@@ -133,7 +142,9 @@ local_inference_handler_map = {
     "Qwen/Qwen2-1.5B-Instruct": QwenHandler,
     "Qwen/Qwen2-7B-Instruct": QwenHandler,
     "Qwen/Qwen2.5-1.5B-Instruct": QwenHandler,
+    "Qwen/Qwen2.5-3B-Instruct": QwenHandler,
     "Qwen/Qwen2.5-7B-Instruct": QwenHandler,
+<<<<<<< HEAD
     "Qwen/Qwen2.5-72B-Instruct": QwenHandler,
     "Team-ACE/ToolACE-8B": LlamaHandler,
     "openbmb/MiniCPM3-4B": MiniCPMHandler,
@@ -143,6 +154,33 @@ local_inference_handler_map = {
     "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct": DeepseekCoderHandler,
     "deepseek-ai/DeepSeek-V2-Chat-0628": DeepseekHandler,
     "deepseek-ai/DeepSeek-V2-Lite-Chat": DeepseekHandler,
+=======
+    "Qwen2.5-Instruct-7B-xlam-default": QwenHandler,
+    "Qwen2.5-Instruct-7B-xlam": SalesforceHandler,
+    "Qwen2.5-7B-Instruct-CODEPLAN": FuncGenHandler,
+    "FuncGen-1122": FuncGenHandler,
+    "FuncGen-1203": FuncGenHandler,
+    "FuncGen-1204": FuncGenHandler,
+    "FuncGen-1207": QwenHandler,
+    "FuncGen-1209": FuncGenHandler,
+    "FuncGen-1211": FuncGenHandler,
+    "FuncGen-1209-2": QwenHandler,
+    "FuncGen-1211-2": QwenHandler,
+    "FuncGen-1213": QwenHandler,
+    "FuncGen-1217": QwenHandler,
+    "FuncGen-1217-onlyfc": QwenHandler,
+    "FuncGen-1219": FuncGenHandler,
+    "FuncGen-1122-template-revised": FuncGenHandler,
+    # "FuncGen-1122": QwenHandler,
+    "FuncGen-1122-template-revised-Qwen": QwenHandler,
+    "FuncGen-1122-template-revised-Qwen-Assistant": QwenHandler,
+    "Qwen/Qwen2.5-Coder-1.5B-Instruct": QwenHandler,
+    "Qwen/Qwen2.5-Coder-7B-Instruct": QwenHandler,
+    "qwen25": QwenHandler, # Qwen2.5-72B-Instruct
+    "Team-ACE/ToolACE-8B": LlamaHandler,
+    "openbmb/MiniCPM3-4B": MiniCPMHandler,
+    "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct": DeepseekHandler
+>>>>>>> 5cbf37e (update with gorilla official)
 }
 
 # Deprecated/outdated models, no longer on the leaderboard

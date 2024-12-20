@@ -25,7 +25,10 @@ class OSSHandler(BaseHandler, EnforceOverrides):
         self.model_name_huggingface = model_name
         self.model_style = ModelStyle.OSSMODEL
         self.dtype = dtype
-        self.client = OpenAI(base_url=f"http://localhost:{VLLM_PORT}/v1", api_key="EMPTY")
+        # self.client = OpenAI(base_url=f"http://localhost:{VLLM_PORT}/v1", api_key="EMPTY")
+        # self.client = OpenAI(base_url=f"http://146.56.238.200:30061/v1", api_key="EMPTY")
+        self.client = OpenAI(base_url=f"http://127.0.0.1:11053/v1", api_key="EMPTY")
+
 
     @override
     def inference(self, test_entry: dict, include_input_log: bool, exclude_state_log: bool):
@@ -58,6 +61,45 @@ class OSSHandler(BaseHandler, EnforceOverrides):
         exclude_state_log: bool,
         update_mode: bool,
         result_dir=RESULT_PATH,
+    ):
+        """
+        Batch inference for OSS models using an existing vllm service.
+        Args:
+            test_entries: List of test cases to process
+            num_gpus: Not used since we're using existing service
+            gpu_memory_utilization: Not used since we're using existing service
+            backend: Not used since we're using existing service
+            include_debugging_log: Whether to include debugging logs
+        """
+        futures = []
+        with ThreadPoolExecutor(max_workers=20) as executor:
+            with tqdm(
+                total=len(test_entries),
+                desc=f"Generating results for {self.model_name}"
+            ) as pbar:
+                # Submit all tasks to the thread pool
+                for test_case in test_entries:
+                    future = executor.submit(
+                        self._multi_threaded_inference, 
+                        test_case, 
+                        include_debugging_log
+                    )
+                    futures.append(future)
+
+                # Process results as they complete
+                for future in futures:
+                    result = future.result()
+                    self.write(result)
+                    pbar.update()
+
+
+    def batch_inference_ori(
+        self,
+        test_entries: list[dict],
+        num_gpus: int,
+        gpu_memory_utilization: float,
+        backend: str,
+        include_debugging_log: bool,
     ):
         """
         Batch inference for OSS models.

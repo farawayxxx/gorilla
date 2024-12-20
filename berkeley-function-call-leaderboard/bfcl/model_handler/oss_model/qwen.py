@@ -14,9 +14,14 @@ class QwenHandler(OSSHandler):
         """
         formatted_prompt = ""
 
+        # for message in messages:
+        #     formatted_prompt += f"<|im_start|>{message['role']}\n{message['content']}<|im_end|>\n"
+
+        # formatted_prompt += "<|im_start|>assistant\n"
+        
         for message in messages:
-            formatted_prompt += f"<|im_start|>{message['role']}\n{message['content']}<|im_end|>\n"
+            formatted_prompt += f"<|ys_start|>{message['role']}\n{message['content']}<|ys_end|>\n"
 
-        formatted_prompt += "<|im_start|>assistant\n"
-
+        formatted_prompt += "<|ys_start|>assistant\n"
+        # breakpoint()
         return formatted_prompt
